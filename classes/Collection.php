@@ -6,9 +6,9 @@ require_once __DIR__ . "/Product.php";
 class Collection extends Product{
     private $collection;
     
-    function __construct($_name, $_price, $_collection)
+    function __construct($_id, $_name, $_price, $_collection)
     {
-        parent::__construct($_name, $_price);
+        parent::__construct($_id, $_name, $_price);
         $this->collection = $_collection;
     }
 

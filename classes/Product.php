@@ -3,6 +3,7 @@
 // Creo la classe Product
 
 class Product{
+    private $id;
     private $name;
     private $price;
     private $type;
@@ -11,8 +12,9 @@ class Product{
 
     // Creo il construct di Product
 
-    public function __construct($_name, $_price)
+    public function __construct($_id, $_name, $_price)
     {
+        $this->id = $_id;
         $this->name = $_name;
         $this->price = $_price; 
     }
