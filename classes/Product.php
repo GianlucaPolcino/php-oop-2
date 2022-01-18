@@ -7,7 +7,7 @@ class Product{
     private $price;
     private $type;
     private $description;
-    protected $discount = 0;
+    protected $discount;
 
     // Creo il construct di Product
 
@@ -31,6 +31,10 @@ class Product{
         $this->price = $_price;
     }
 
+    public function setDescription($_description){
+        $this->description = $_description;
+    }
+
     // Creo i GETTER
 
     public function getName(){
@@ -45,6 +49,13 @@ class Product{
         return $this->price;
     }
 
-    
+    public function getDescription(){
+        return $this->description;
+    }
+
+    public function getFinalPrice(){
+        $final_price = $this->price - (($this->price * $this->discount) / 100);
+        return number_format($final_price, 2, ",", "");
+    }
 }
 ?>
